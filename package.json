@@ -12,6 +12,7 @@
     "code:eslint": "eslint"
   },
   "dependencies": {
+    "@n8n/chat": "^0.50.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@prisma/client": "^6.13.0",
     "@tanstack/vue-query": "^5.83.1",
