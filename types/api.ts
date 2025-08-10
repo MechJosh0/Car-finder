@@ -22,4 +22,14 @@ export interface User {
   id: number;
   email?: string;
   full_name?: string | null;
+  cars?: Car[];
+}
+
+export interface Car {
+  id: number;
+  make: string;
+  model: string;
+  year: number;
+  colour: string;
+  user?: User;
 }

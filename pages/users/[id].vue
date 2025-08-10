@@ -14,6 +14,12 @@ const { data: user, isLoading, isError, error } = useUser(userId);
     <div v-else-if="user?.data">
       <h1>{{ user.data.full_name }}</h1>
       <p>{{ user.data.email }}</p>
+      <h3>Cars</h3>
+      <ul>
+        <li v-for="car in user.data.cars" :key="car.id">
+          <p>{{ car.make }} - {{ car.model }} ({{ car.year }})</p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

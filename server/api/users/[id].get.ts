@@ -18,6 +18,9 @@ export default defineEventHandler(async (event): Promise<ApiResponse<User>> => {
       where: {
         id: parseInt(userId),
       },
+      include: {
+        cars: true,
+      },
     });
 
     if (!user) {
