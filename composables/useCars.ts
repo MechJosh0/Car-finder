@@ -3,9 +3,9 @@ import type { PaginationState } from "@tanstack/vue-table";
 
 export default (pagination: Ref<PaginationState>) => {
   return useQuery({
-    queryKey: ["users", pagination],
+    queryKey: ["cars", pagination],
     queryFn: () =>
-      $fetch(`/api/users`, {
+      $fetch(`/api/cars`, {
         params: {
           page: pagination.value.pageIndex + 1,
           limit: pagination.value.pageSize,
